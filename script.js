@@ -59,17 +59,17 @@ function reveal(){
 }
 
 
-// const message = "Welkom bij Pizzeria Bella Italia"
-// const speed = 65 // speed in milliseconds
-// let textPosition = 0
+const message = "Welkom bij Pizzeria Bella Italia, gelegen in het pittoreske dorp Eizeringen in de gemeente Lennik. Opgericht in 2016 door de ondernemende geest van Aldo Santoro en Gabriella Parillo, is Bella Italia geboren uit de passie voor de authentieke Napolitaanse keuken. Hier kunt u genieten van een ruime keuze aan pizza's en pasta's, bereid volgens de traditionele recepten, waardoor u de heerlijke en onweerstaanbare smaken van Campanië in België kunt proeven. Kom bij ons langs voor een unieke culinaire ervaring die u het gevoel geeft thuis te zijn."
+const speed = 30 // speed in milliseconds
+let textPosition = 0
 
-// function typewriter() {
-//   document.querySelector("#message").innerHTML = message.substring(0, textPosition) + '<span class="span1">\u25AE</span>'
+function typewriter() {
+  document.querySelector("#message").innerHTML = message.substring(0, textPosition) + '<span class="span1">\u25AE</span>'
   
-//   if(textPosition++ !== message.length)
-//     setTimeout(typewriter, speed)
-// }
+  if(textPosition++ !== message.length)
+    setTimeout(typewriter, speed)
+}
 
-// window.onload = function(){
-//   typewriter()
-// }
+window.onload = function(){
+  typewriter()
+}

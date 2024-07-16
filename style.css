@@ -74,6 +74,10 @@ header {
     z-index: -1;
 }
 
+.family-container {
+    background: url(assets/p);
+}
+
 .main-text-container {
     width: 90dvw;
     height: 100dvh;
@@ -305,6 +309,10 @@ header {
     text-decoration: none;
 }
 
+.index-body {
+    background-color: black;
+}
+
 /* Mobile menu toggle */
 .menu-toggle {
     display: none;
@@ -369,8 +377,8 @@ header {
     gap: 3rem;
     border: #ffffff solid 2px;
     background-color: rgba(0, 0, 0, 0.199);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     padding: 1rem;
     text-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     font-size: .9rem;
@@ -413,8 +421,8 @@ header {
         right: 0;
         height: 100dvh;
         background-color: #ec22254a;
-        -webkit-backdrop-filter: blur(6px);
-        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
         transform: translateX(0); /* Initially off-screen */
         opacity: 0; /* Initially hidden */
         z-index: 1;
@@ -423,6 +431,16 @@ header {
     .menu4, .menu1, .menu2, .menu3 {
         height: 80dvh;
     }
+
+    .span1{
+        animation: blinker 1s linear infinite;
+      }
+      
+      @keyframes blinker{
+        50%{
+          opacity: 0;
+        }
+      }
 
 
     .navbar.active {
@@ -438,8 +456,6 @@ header {
 
     .navbar.active a {
         color: #ffffff;
-        padding: 1rem;
-        border-radius: 35px;
     }
 
     .navbar.remove-active {

@@ -57,3 +57,19 @@ function reveal(){
         }
     }
 }
+
+
+// const message = "Welkom bij Pizzeria Bella Italia"
+// const speed = 65 // speed in milliseconds
+// let textPosition = 0
+
+// function typewriter() {
+//   document.querySelector("#message").innerHTML = message.substring(0, textPosition) + '<span class="span1">\u25AE</span>'
+  
+//   if(textPosition++ !== message.length)
+//     setTimeout(typewriter, speed)
+// }
+
+// window.onload = function(){
+//   typewriter()
+// }

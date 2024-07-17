@@ -32,6 +32,11 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.clock {
+    color: #ee3639;
+    font-size: 1rem;
+}
+
 .navbar {
     height: 100%;
     width: 90%;
@@ -110,8 +115,8 @@ header {
 
 .story-p {
     background-color: none;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     padding: 1rem;
     border-radius: 15px;
@@ -179,6 +184,96 @@ header {
     font-weight: bold;
 }
 
+.container-select-menu {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.select-menu {
+    display: flex;
+    justify-content: flex-start;
+    overflow: scroll;
+   
+}
+
+.ul-select {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    font-size: 1.5rem;
+    height: 5rem;
+    background-color: none;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    border: solid 1px white;
+    border-radius: 15px;
+    overflow: auto;
+    width: 90dvw;
+    cursor: pointer;
+}
+
+.menu-content {
+    padding: 20px;
+    background-color: none;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    color: #fefefe;
+    border-radius: 15px;
+    margin-top: 5rem;
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.menu-content ul li {
+    padding: 35px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-content ul li:last-child {
+    border-bottom: none;
+}
+
+.ul-select::-webkit-scrollbar {
+    display: none;
+}
+.select-menu::-webkit-scrollbar {
+    display: none;
+}
+
+  .select {
+    border-right:  solid 1px white;
+    padding-right: 30px;
+    transition: .3s;
+   
+  }
+
+  .last {
+    border: none;
+  }
+
+  .first {
+    padding-left: 30px;
+  }
+
+ .ul-pizzas {
+    color: #f7f6f6;
+ }
+
+ li b {
+    color: #ffffff;
+ }
 
 
 /* .body-menu {
@@ -243,8 +338,8 @@ header {
     justify-content: center;
     height: 5dvh;
     background-color: none;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     color: white;
     font-size: .5rem;
     ;
@@ -267,8 +362,8 @@ header {
 .address {
     color: #ffffff;
     background-color: none;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 15px;
@@ -279,17 +374,12 @@ header {
 
 }
 
-.contact a {
-    color: #df2d30;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 
 
 .span-address {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #df2d30;
+    color: #ee3639;;
 }
 
 
@@ -300,8 +390,8 @@ header {
 }
 
 .address a {
-    text-decoration-color: #df2d30;
-    color: #df2d30;
+    text-decoration-color: #ee3639;;
+    color: #ee3639;
     font-weight: bold;
 }
 
@@ -377,13 +467,14 @@ header {
     gap: 3rem;
     border: #ffffff solid 2px;
     background-color: rgba(0, 0, 0, 0.199);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     padding: 1rem;
     text-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     font-size: .9rem;
     border-radius: 15px;
     margin-top: 10rem;
+    padding-bottom: 2rem;
 }
 
 .ul-openingsuren {
@@ -411,6 +502,12 @@ header {
 
 
 /* Mobile view styles */
+@media (min-width: 768px) {
+    .clock {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         display: none;
@@ -421,12 +518,14 @@ header {
         right: 0;
         height: 100dvh;
         background-color: #ec22254a;
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(25px);
+        backdrop-filter: blur(25px);
         transform: translateX(0); /* Initially off-screen */
         opacity: 0; /* Initially hidden */
         z-index: 1;
     }
+
+
 
     .menu4, .menu1, .menu2, .menu3 {
         height: 80dvh;
@@ -442,6 +541,8 @@ header {
         }
       }
 
+      
+
 
     .navbar.active {
         display: flex;
@@ -449,7 +550,7 @@ header {
         opacity: 1; /* Show the menu */
         animation: slideInFromLeft 0.5s ease-out forwards; /* Apply the slide-in animation */
         background:none;
-        background-color: #df2d2d33;
+        background-color: #5d5d5d33;
         width: 80dvw;
        
     }
@@ -459,6 +560,7 @@ header {
     }
 
     .navbar.remove-active {
+        background-color: #5d5d5d33;
         animation: slideOutToLeft 0.5s ease-out ; /* Apply the slide-out animation */
     }
 
@@ -475,6 +577,12 @@ header {
         display: none;
     }
     
+}
+
+@media (max-width: 425px) {
+    .logo img {
+        width: 130px;
+    }
 }
 
 @media (max-width: 336px) {
@@ -521,6 +629,44 @@ header {
        height: 50dvh;
     }
 }
+
+@media (min-width: 837px) {
+    .select-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: scroll;
+    }
+
+    .ul-select {
+
+        width: 100%;
+    }
+
+    .select:hover {
+        color: #ee3639;
+    }
+
+
+    .menu-content {
+        width: 50dvw;
+
+    }
+
+    .container-menu1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 
 @media (min-width: 1000px) {
@@ -594,5 +740,23 @@ header {
 
     .family-img > img {
         width: 40dvw;
+    }
+
+    .menu-content {
+        width: 50dvw;
+
+    }
+
+    .container-menu1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

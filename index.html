@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=**Quicksand:wght@500**&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/bella italia (7).ico?">
     <title>Pizzeria Bella Italia</title>
@@ -30,7 +32,9 @@
                 <li><a href="#openingsuren">Openingsuren</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <div class="clock"></div>
             </ul>
+            
         </nav>
     </header>
 
@@ -41,6 +45,8 @@
     </div>
 </main>
 
+    <!-- story + image family section -->
+
 <article class="family-container">
 
     <div class="family-img reveal">
@@ -48,26 +54,30 @@
     </div>
 
     <div class="story-container reveal">
-        <p class="story-p" id="message" style="color: white;">
+        <p class="story-p" style="color: white;">Welkom bij Pizzeria Bella Italia, gelegen in het pittoreske dorp Eizeringen in de gemeente Lennik. Opgericht in 2016 door de ondernemende geest van Aldo Santoro en Gabriella Parillo, is Bella Italia geboren uit de passie voor de authentieke Napolitaanse keuken. Hier kunt u genieten van een ruime keuze aan pizza's en pasta's, bereid volgens de traditionele recepten, waardoor u de heerlijke en onweerstaanbare smaken van Campanië in België kunt proeven. Kom bij ons langs voor een unieke culinaire ervaring die u het gevoel geeft thuis te zijn.
         </p>
     </div>
 </article>
 
-
-
-
-
+<!-- Menu section -->
 
     <a id="menu"><h2 class="menu-title1 reveal">Menu</h2></a>
     
-<article>
+<article class="container-menu1">
 
-    <div class="container-menu">
-    <img class="menu1 reveal" src="menu/vini-bevande.webp" alt="">
-    <img class="menu2 reveal" src="menu/pizze.webp" alt="">
-    <img class="menu3 reveal" src="menu/antipasti-paste.webp" alt="">
-    <img class="menu4 reveal" src="menu/scaloppine-dessert-insalate.webp" alt="">
+
+    <div class="container-select-menu">
+        <div class="select-menu">
+            <ul class="ul-select">
+                <li class="select first" onclick="showMenu('pizzas')" on>Pizza's</li>
+                <li class="select" onclick="showMenu('pastas')">Pasta's</li>
+                <li class="select" onclick="showMenu('antipasti')">Antipasti</li>
+                <li class="select" onclick="showMenu('scaloppine')">Scaloppine</li>
+                <li class="select last" onclick="showMenu('insalata')">Insalata</li>
+            </ul>
+        </div>
     </div>
+    <div id="menu-content" class="menu-content"></div>
 
 </article>
 </div>
@@ -131,6 +141,6 @@
 </div>
 
 
-<script src="   script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

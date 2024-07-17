@@ -7,7 +7,7 @@ mobileMenu.addEventListener('click', () => {
         navbar.classList.remove('active');
         navbar.classList.add('remove-active');
         setTimeout(() => {
-            navbar.style.display = 'none';
+            navbar.style.display = 'flex';
         }, 500); // Duration of the slide-out animation
         mobileMenu.classList.remove('active');
     } else {
@@ -25,7 +25,7 @@ document.addEventListener('click', (e) => {
         navbar.classList.remove('active');
         navbar.classList.add('remove-active');
         setTimeout(() => {
-            navbar.style.display = 'none';
+            navbar.style.display = 'flex';
         }, 500); // Duration of the slide-out animation
         mobileMenu.classList.remove('active');
     }
@@ -37,7 +37,7 @@ navLinks.forEach(link => {
             navbar.classList.remove('active');
             navbar.classList.add('remove-active');
             setTimeout(() => {
-                navbar.style.display = 'none';
+                navbar.style.display = 'flex';
             }, 500); // Duration of the slide-out animation
             mobileMenu.classList.remove('active');
         }

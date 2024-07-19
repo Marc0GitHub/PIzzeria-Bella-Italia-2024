@@ -1,45 +1,76 @@
-const mobileMenu = document.getElementById('mobile-menu');
-const navbar = document.querySelector('.navbar');
-const navLinks = document.querySelectorAll('.navbar a');
 
-mobileMenu.addEventListener('click', () => {
-    if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-        navbar.classList.add('remove-active');
-        setTimeout(() => {
-            navbar.style.display = 'flex';
-        }, 500); // Duration of the slide-out animation
-        mobileMenu.classList.remove('active');
-    } else {
-        navbar.style.display = 'flex';
-        setTimeout(() => {
-            navbar.classList.remove('remove-active');
-            navbar.classList.add('active');
-        }, 10); // Slight delay to ensure the display change takes effect
-        mobileMenu.classList.add('active');
-    }
-});
 
-document.addEventListener('click', (e) => {
-    if (navbar.classList.contains('active') && !navbar.contains(e.target) && !mobileMenu.contains(e.target)) {
-        navbar.classList.remove('active');
-        navbar.classList.add('remove-active');
-        setTimeout(() => {
-            navbar.style.display = 'flex';
-        }, 500); // Duration of the slide-out animation
-        mobileMenu.classList.remove('active');
-    }
-});
+// const mobileMenu = document.getElementById('mobile-menu');
+// const navbar = document.querySelector('.navbar');
+// const navLinks = document.querySelectorAll('.navbar a');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (navbar.classList.contains('active')) {
-            navbar.classList.remove('active');
-            navbar.classList.add('remove-active');
-            setTimeout(() => {
-                navbar.style.display = 'flex';
-            }, 500); // Duration of the slide-out animation
-            mobileMenu.classList.remove('active');
+// mobileMenu.addEventListener('click', () => {
+//     if (navbar.classList.contains('active')) {
+//         navbar.classList.remove('active');
+//         navbar.classList.add('remove-active');
+//         setTimeout(() => {
+//             navbar.style.display = 'none';
+//         }, 100); // Duration of the slide-out animation
+//         mobileMenu.classList.remove('active');
+//     } else {
+//         navbar.style.display = 'flex';
+//         setTimeout(() => {
+//             navbar.classList.remove('remove-active');
+//             navbar.classList.add('active');
+//         }, 10); // Slight delay to ensure the display change takes effect
+//         mobileMenu.classList.add('active');
+//     }
+// });
+
+// document.addEventListener('click', (e) => {
+//     if (navbar.classList.contains('active') && !navbar.contains(e.target) && !mobileMenu.contains(e.target)) {
+//         navbar.classList.remove('active');
+//         navbar.classList.add('remove-active');
+//         setTimeout(() => {
+//             navbar.style.display = 'none';
+//         }, 500); // Duration of the slide-out animation
+//         mobileMenu.classList.remove('active');
+//     }
+// });
+
+// navLinks.forEach(link => {
+//     link.addEventListener('click', () => {
+//         if (navbar.classList.contains('active')) {
+//             navbar.classList.remove('active');
+//             navbar.classList.add('remove-active');
+//             setTimeout(() => {
+//                 navbar.style.display = 'none';
+//             }, 500); // Duration of the slide-out animation
+//             mobileMenu.classList.remove('active');
+//         }
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const sideNav = document.getElementById('side-nav');
+    const navLinks = sideNav.querySelectorAll('a');
+
+    // Toggle the side nav and burger icon
+    menuToggle.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from propagating to the document
+        menuToggle.classList.toggle('active');
+        sideNav.classList.toggle('active');
+    });
+
+    // Close the side nav when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            sideNav.classList.remove('active');
+        });
+    });
+
+    // Close the side nav when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!menuToggle.contains(event.target) && !sideNav.contains(event.target)) {
+            menuToggle.classList.remove('active');
+            sideNav.classList.remove('active');
         }
     });
 });
@@ -215,3 +246,5 @@ function clock() {// We create a new Date object and assign it to a variable cal
       }
     }
     setInterval(clock, 1000);
+
+    

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl-BE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=**Quicksand:wght@500**&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/bella italia (7).ico?">
     <title>Pizzeria Bella Italia</title>
 </head>
 
 <body class="index-body">
-    <video autoplay muted playsinline loop id="myVideo">
-        <source src="assets/14642557-uhd_1440_2560_25fps.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
+
       
     <header>
         <div class="logo">
@@ -27,43 +28,52 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#openingsuren">Openingsuren</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="navbar" id="side-nav">
+                <li><a href="#home1">Home</a></li>
+                <li><a href="#openingsuren1">Openingsuren</a></li>
+                <li><a href="#menu1">Menu</a></li>
+                <li><a href="#contact1">Contact</a></li>
                 <div class="clock"></div>
             </ul>
             
         </nav>
     </header>
-
-    <a id="home"></a><main>
+    <div id="home1"></div>
+    <video autoplay muted playsinline loop id="myVideo">
+        <source src="assets/14642557-uhd_1440_2560_25fps.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <main>
     <div class="main-text-container">
         <p class="main-text" >Welkom bij Pizzeria Bella Italia</p>
+
         
     </div>
 </main>
+
+
 
     <!-- story + image family section -->
 
 <article class="family-container">
 
+    <p class="family-title reveal">Over ons</p>
+
     <div class="family-img reveal">
-        <img src="assets/DSCF2570 (1).jpg" alt="family photo">
+        <img src="https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/441523890_942483550867126_2081061945458738575_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1SqH1ooOSqEQ7kNvgGH77xy&_nc_ht=scontent-bru2-1.xx&oh=00_AYDjOqEgY5_MXX1nHPYPPddNv39LMiZQdosujcjjXiJo0A&oe=66A02644" alt="family photo">
     </div>
 
     <div class="story-container reveal">
-        <p class="story-p" style="color: white;">Welkom bij Pizzeria Bella Italia, gelegen in het pittoreske dorp Eizeringen in de gemeente Lennik. Opgericht in 2016 door de ondernemende geest van Aldo Santoro en Gabriella Parillo, is Bella Italia geboren uit de passie voor de authentieke Napolitaanse keuken. Hier kunt u genieten van een ruime keuze aan pizza's en pasta's, bereid volgens de traditionele recepten, waardoor u de heerlijke en onweerstaanbare smaken van Campanië in België kunt proeven. Kom bij ons langs voor een unieke culinaire ervaring die u het gevoel geeft thuis te zijn.
+        <p class="story-p">Welkom bij Pizzeria Bella Italia in Eizeringen, Lennik. Sinds 2016 serveren Aldo Santoro en Gabriella Parillo hier authentieke Napolitaanse pizza's en pasta's. Proef de heerlijke smaken van Campanië in België. Kom langs voor een unieke culinaire ervaring!
         </p>
     </div>
 </article>
 
 <!-- Menu section -->
-
+<article class="container-menu1" id="menu1">
     <a id="menu"><h2 class="menu-title1 reveal">Menu</h2></a>
     
-<article class="container-menu1">
+
 
 
     <div class="container-select-menu">
@@ -84,10 +94,11 @@
 
 <!-- Opening section -->
 
-<a id="openingsuren"></a>
-<div class="body-opening reveal">
-    <article>
-        <div class="opening-container reveal">
+
+<article class="opening-body" id="openingsuren1">
+ <div class="body-opening">
+    
+        <div class="opening-container">
             <h1 class="h1-openingsuren reveal">Openingsuren</h1>
             <ul class="ul-openingsuren reveal">
                 <li class="hours">Maandag: <span class="points">......................</span>.....................................17 - 21:30</li>
@@ -99,33 +110,29 @@
                 <li class="hours">Zondag: <span class="points">.....................</span>....................................GESLOTEN</li>
             </ul>
         </div>
-    </article>
-    </div>
     
+    </div>
+    </article>
     <div class="body-menu">
 
 <!-- Contact section -->
-
-<a id="contact"><div class="body-contact"></a>
+<article>
+<div class="body-contact" id="contact1">
 
 
    <h2 class="contact-title1 reveal">Reserveer</h2>
 
-<article>
-    <div class="contact-container">
+
+    <div class="contact-container"><a id="contact"></a>
         <div class="address reveal">
-            Kom ons bezoeken: <a href="https://www.google.com/maps/place/Pizzeria+BELLA+ITALIA+di+ALDO+SANTORO/@50.8352579,4.1461431,17z/data=!4m15!1m8!3m7!1s0x47c3b9226fb7c975:0x5c718d3ae0fb6b03!2sPizzeria+BELLA+ITALIA+di+ALDO+SANTORO!8m2!3d50.8352545!4d4.148718!10e1!16s%2Fg%2F1pxwk4zz3!3m5!1s0x47c3b9226fb7c975:0x5c718d3ae0fb6b03!8m2!3d50.8352545!4d4.148718!16s%2Fg%2F1pxwk4zz3?entry=ttu"><span class="span-address">Ninoofsesteenweg 55, 1750 Lennik</span></a>
-        
-        <br><br>
-        Plaats hier uw bestelling: <a href="tel:024613157">024613157</a> 
-        <br><br>
-
-        U kunt online bestellen op: <a href="https://www.takeaway.com/be-it/menu/bella-italia-lennik?shipping=pickup">Takeaway.com</a>
-        <br>
-
-        <br><hr><br>
-
-        Of bezoek onze Facebookpagina: <a href="https://www.facebook.com/FastfoodBellaItalia" target="_blank">Pizzeria Bella Italia</a>
+            <ul class="ul-contact">
+                <li><a href="tel:024613157">Bel ons</a></li>
+                <li><a href="https://www.takeaway.com/be/menu/bella-italia-lennik?shipping=pickup" target="_blank">Bestel online</a></li>
+                <li><a href="https://www.facebook.com/FastfoodBellaItalia/" target="_blank">Volg ons</a></li>
+            </ul>
+            <p>Ninoofsesteenweg 55, 1750 Lennik</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.7789716792213!2d4.146137712481819!3d50.83525785946389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b9226fb7c975%3A0x5c718d3ae0fb6b03!2sPizzeria%20BELLA%20ITALIA%20di%20ALDO%20SANTORO!5e0!3m2!1sit!2sbe!4v1721389199444!5m2!1sit!2sbe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
         </div>
     </div>
 

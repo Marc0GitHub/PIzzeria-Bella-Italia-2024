@@ -10,24 +10,31 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;    
     scroll-behavior: smooth;
+   
 }
 
-
+body, html {
+    overflow-x: clip;
+}
 
 header {
+    position: sticky;    
     width: 100%;
     height: 85px;
-    position: sticky;
+    
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.93);
+    /* -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px); */
 
 
     z-index: 1000;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 20px;
+    padding-right: 30px;
+    padding-left: 30px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -117,7 +124,7 @@ header {
     width: 100px;
 }
 
-.story-container {
+.story-container, .container-info {
     width: 85dvw;
     margin-left: auto;
     margin-right: auto;
@@ -127,8 +134,6 @@ header {
 }
 
 .story-p {
-    background-color: none;
-    border-radius: 15px;
     color: rgb(17, 17, 17);
 }
 
@@ -197,8 +202,24 @@ header {
 .select-menu {
     display: flex;
     justify-content: flex-start;
-    overflow: scroll;
+    overflow-x: auto;
    
+}
+
+.ul-select .select.highlighted {
+    color: #ec4747; /* Highlight text color */
+}
+
+.container-container-info {
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .ul-select {
@@ -210,14 +231,18 @@ header {
     height: 5rem;
     font-weight: bold;
     
-    border:solid 1px white;
-    border-radius: 25px;
     
-    overflow: auto;
-    width: 90dvw;
-    cursor: pointer;
-}
+    overflow-x:auto;
+        background: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+   
+    }
 
+    .select:active{
+        color: #000000;
+    }
 
 
 .menu-content {
@@ -247,19 +272,17 @@ header {
     border-bottom: none;
 }
 
-.ul-select::-webkit-scrollbar {
-    display: none;
-}
-.select-menu::-webkit-scrollbar {
-    display: none;
-}
+
 
   .select {
     border-right:  solid 1px white;
     padding-right: 30px;
     transition: .3s;
+    color: white;
    
   }
+
+  
 
   .last {
     border: none;
@@ -278,11 +301,7 @@ header {
  }
 
 
-/* .body-menu {
-    background-image: url(assets/pexels-n-voitkevich-5792328.jpg);
-    background-size: cover;
 
-} */
 
 .family-img > img {
     width: 85dvw;
@@ -359,12 +378,11 @@ header {
     align-items: center;
     justify-content: center;
     height: 5dvh;
-    background-color: none;
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+    background-color: black;
+
     color: rgb(126, 126, 126);
     font-size: .5rem;
-    ;
+    
 
 }
 
@@ -382,9 +400,11 @@ svg {
 
 .address {
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-
-    font-family: Arial, Helvetica, sans-serif;
+    
     padding: 2rem;
    
 
@@ -397,9 +417,7 @@ svg {
 
 }
 
-.opening-body {
 
-}
 
 
 
@@ -417,9 +435,18 @@ svg {
 
 .address a {
     text-decoration: none;
-    color: #ee3639;
+    color: #000000;
     font-weight: bold;
 }
+
+
+.material-symbols-outlined {
+  font-size: 3rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
 
 .address a:hover {
     text-decoration: underline;
@@ -427,7 +454,7 @@ svg {
 }
 
 .index-body {
-    background-color: black;
+    background-color: #000000;
 }
 
 /* Mobile menu toggle */
@@ -447,9 +474,19 @@ svg {
     transition: 0.4s;
 }
 
+.bar1 {
+    background-color: green;
+}
+.bar2 {
+    background-color: rgb(255, 255, 255);
+}
+.bar3 {
+    background-color: rgb(255, 0, 0);
+}
+
 .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(10px, 5.5px);
-    background-color: black; /* Color when on */
+    background-color: rgb(0, 0, 0); /* Color when on */
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -496,12 +533,13 @@ svg {
 .ul-contact {
     list-style: none;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    gap: 1rem;
+    gap: 2rem;
+    
 }
+
 
 iframe {
     width: 85dvw;
@@ -540,7 +578,152 @@ iframe {
     opacity: 1;
 }
 
+.gallery{ 
+    text-align: center;
+  }
+  
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .image-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #myModal {
+    z-index: 101;
+  }
+  
+  .scrollable-images {
+    display: flex;
+    /*   justify-content: center; */
+      overflow-x: auto;
+      gap: 10px;
+      transition: 700ms cubic-bezier(0.075, 0.02, 0.165, 1);
+      transform-origin: center;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b9b9b9; 
+  }
+  
+  .scrollable-images img {
+    width: 200px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+ 
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    background-size: contain;
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  #caption {
+    margin: auto;
+    display: block;
+    font-family: 'Hubballi', sans-serif;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  .close {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
+  @keyframes color-change {
+    0% { color: #1dc100;}
+    50% { color: #ff0000;}
+    100% { color: #1dc100;}
+}
+  @keyframes zoom {
+    from {
+      transform: scale(0.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @media screen and (max-width:768px) {
+      .modal-content {
+        margin-top: 20%;
+        width: 100%;
+      }
+  }
+  @media (min-width: 769px) {
+    .modal-content {
+      /*max-width: none; */
+      max-height: 100%; 
+      width: auto; 
+    }
+  }
 
 /* Mobile view styles */
 @media (min-width: 768px) {
@@ -556,7 +739,7 @@ iframe {
         width: 80dvw;
         background: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );        
         top: 0;
-        right: -250px;  /* Initially hidden */
+        right: -700px;  /* Initially hidden */
         transition: transform 0.4s ease-in-out, opacity 0.4s ease;  /* Smooth transition */
         flex-direction: column;
         padding-top: 60px;
@@ -579,7 +762,7 @@ iframe {
 
 
     .navbar.active {
-        transform: translateX(-250px);
+        transform: translateX(-700px);
         opacity: 1;
     }
 
@@ -652,7 +835,7 @@ iframe {
         width: 100%;
         display: flex;
         justify-content: center;
-        overflow: scroll;
+        overflow: hidden;
     }
 
     .ul-select {
@@ -696,6 +879,10 @@ iframe {
 
     }
 
+    .family-title {
+        font-size: 8rem;
+    }
+
     .body-opening {
         font-size: 2rem;
         text-align: center;
@@ -722,14 +909,14 @@ iframe {
 
 
     
-    .story-container {
+    .story-container, .container-info {
         width: 40dvw;
         margin-left: auto;
         margin-right: auto;
     }
 
     .story-p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: rgb(17, 17, 17);
     }
 
@@ -740,11 +927,11 @@ iframe {
 
     .contact, .address {
         font-size: 1.5rem;
-        ;
+        
     }
 
     .family-img > img {
-        width: 80dvw;
+        width: 65dvw;
     }
 
     .menu-content {

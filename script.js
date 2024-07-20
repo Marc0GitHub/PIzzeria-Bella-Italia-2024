@@ -1,76 +1,47 @@
 
 
-// const mobileMenu = document.getElementById('mobile-menu');
-// const navbar = document.querySelector('.navbar');
-// const navLinks = document.querySelectorAll('.navbar a');
+const mobileMenu = document.getElementById('mobile-menu');
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.navbar a');
 
-// mobileMenu.addEventListener('click', () => {
-//     if (navbar.classList.contains('active')) {
-//         navbar.classList.remove('active');
-//         navbar.classList.add('remove-active');
-//         setTimeout(() => {
-//             navbar.style.display = 'none';
-//         }, 100); // Duration of the slide-out animation
-//         mobileMenu.classList.remove('active');
-//     } else {
-//         navbar.style.display = 'flex';
-//         setTimeout(() => {
-//             navbar.classList.remove('remove-active');
-//             navbar.classList.add('active');
-//         }, 10); // Slight delay to ensure the display change takes effect
-//         mobileMenu.classList.add('active');
-//     }
-// });
+mobileMenu.addEventListener('click', () => {
+    if (navbar.classList.contains('active')) {
+        navbar.classList.remove('active');
+        navbar.classList.add('remove-active');
+        setTimeout(() => {
+            navbar.style.display = 'none';
+        }, 100); // Duration of the slide-out animation
+        mobileMenu.classList.remove('active');
+    } else {
+        navbar.style.display = 'flex';
+        setTimeout(() => {
+            navbar.classList.remove('remove-active');
+            navbar.classList.add('active');
+        }, 10); // Slight delay to ensure the display change takes effect
+        mobileMenu.classList.add('active');
+    }
+});
 
-// document.addEventListener('click', (e) => {
-//     if (navbar.classList.contains('active') && !navbar.contains(e.target) && !mobileMenu.contains(e.target)) {
-//         navbar.classList.remove('active');
-//         navbar.classList.add('remove-active');
-//         setTimeout(() => {
-//             navbar.style.display = 'none';
-//         }, 500); // Duration of the slide-out animation
-//         mobileMenu.classList.remove('active');
-//     }
-// });
+document.addEventListener('click', (e) => {
+    if (navbar.classList.contains('active') && !navbar.contains(e.target) && !mobileMenu.contains(e.target)) {
+        navbar.classList.remove('active');
+        navbar.classList.add('remove-active');
+        setTimeout(() => {
+            navbar.style.display = 'none';
+        }, 500); // Duration of the slide-out animation
+        mobileMenu.classList.remove('active');
+    }
+});
 
-// navLinks.forEach(link => {
-//     link.addEventListener('click', () => {
-//         if (navbar.classList.contains('active')) {
-//             navbar.classList.remove('active');
-//             navbar.classList.add('remove-active');
-//             setTimeout(() => {
-//                 navbar.style.display = 'none';
-//             }, 500); // Duration of the slide-out animation
-//             mobileMenu.classList.remove('active');
-//         }
-//     });
-// });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('mobile-menu');
-    const sideNav = document.getElementById('side-nav');
-    const navLinks = sideNav.querySelectorAll('a');
-
-    // Toggle the side nav and burger icon
-    menuToggle.addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent the click from propagating to the document
-        menuToggle.classList.toggle('active');
-        sideNav.classList.toggle('active');
-    });
-
-    // Close the side nav when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            menuToggle.classList.remove('active');
-            sideNav.classList.remove('active');
-        });
-    });
-
-    // Close the side nav when clicking outside of it
-    document.addEventListener('click', function(event) {
-        if (!menuToggle.contains(event.target) && !sideNav.contains(event.target)) {
-            menuToggle.classList.remove('active');
-            sideNav.classList.remove('active');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navbar.classList.contains('active')) {
+            navbar.classList.remove('active');
+            navbar.classList.add('remove-active');
+            setTimeout(() => {
+                navbar.style.display = 'none';
+            }, 500); // Duration of the slide-out animation
+            mobileMenu.classList.remove('active');
         }
     });
 });
@@ -89,6 +60,40 @@ function reveal(){
     }
 }
 
+// Modal functionality
+var modal = document.getElementById('myModal');
+var modalImg = document.getElementById('modalImage');
+var captionText = document.getElementById('caption');
+
+// Get all images in the gallery
+var images = document.querySelectorAll('.scrollable-images img');
+images.forEach(function (img) {
+    img.addEventListener('click', function () {
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+    });
+});
+
+// Get the <span> element that closes the modal
+var span = document.querySelector('.close');
+span.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+// Close the modal when the user clicks outside the modal content
+window.addEventListener('click', function (event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Close the modal when the escape key is pressed
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' || event.keyCode === 27) {
+        modal.style.display = 'none';
+    }
+});
 
 // const message = "Welkom bij Pizzeria Bella Italia, gelegen in het pittoreske dorp Eizeringen in de gemeente Lennik. Opgericht in 2016 door de ondernemende geest van Aldo Santoro en Gabriella Parillo, is Bella Italia geboren uit de passie voor de authentieke Napolitaanse keuken. Hier kunt u genieten van een ruime keuze aan pizza's en pasta's, bereid volgens de traditionele recepten, waardoor u de heerlijke en onweerstaanbare smaken van Campanië in België kunt proeven. Kom bij ons langs voor een unieke culinaire ervaring die u het gevoel geeft thuis te zijn."
 // const speed = 30 // speed in milliseconds
@@ -197,7 +202,7 @@ const insalata = `
 
 // Similarly, add the other menu items
 
-function showMenu(category) {
+function showMenu(category, element) {
     let content = '';
     switch (category) {
         case 'pizzas':
@@ -218,11 +223,23 @@ function showMenu(category) {
         // Add cases for other menu items
     }
     document.getElementById('menu-content').innerHTML = content;
+    highlightMenuItem(element);
+}
+
+function highlightMenuItem(item) {
+    // Remove the 'highlighted' class from all items
+    const items = document.querySelectorAll('.ul-select .select');
+    items.forEach(i => i.classList.remove('highlighted'));
+    
+    // Add the 'highlighted' class to the clicked item
+    item.classList.add('highlighted');
 }
 
 window.onload = function() {
-    showMenu('pizzas'); // Default to showing pizzas on load
+    showMenu('pizzas', document.querySelector('.ul-select .select.first')); // Default to showing pizzas on load
 }
+
+
 
 function clock() {// We create a new Date object and assign it to a variable called "time".
     var time = new Date(),

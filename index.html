@@ -10,6 +10,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/bella italia (7).ico?">
     <title>Pizzeria Bella Italia</title>
@@ -19,19 +20,20 @@
 
       
     <header>
-        <div class="logo">
-            <img src="assets/bella italia (6).svg" alt="logo pizzeria">
+        <a href="/"><div class="logo">
+            <img src="assets/bella italia (6).svg" alt="logo pizzeria"></a>
         </div>
         <nav>
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
             </div>
             <ul class="navbar" id="side-nav">
                 <li><a href="#home1">Home</a></li>
                 <li><a href="#openingsuren1">Openingsuren</a></li>
                 <li><a href="#menu1">Menu</a></li>
+                <li><a href="#fotos1">Foto's</a></li>
                 <li><a href="#contact1">Contact</a></li>
                 <div class="clock"></div>
             </ul>
@@ -64,9 +66,58 @@
     </div>
 
     <div class="story-container reveal">
-        <p class="story-p">Welkom bij Pizzeria Bella Italia in Eizeringen, Lennik. Sinds 2016 serveren Aldo Santoro en Gabriella Parillo hier authentieke Napolitaanse pizza's en pasta's. Proef de heerlijke smaken van Campanië in België. Kom langs voor een unieke culinaire ervaring!
+        <p class="story-p">Welkom bij Pizzeria <span style="animation: color-change 3.5s infinite;">Bella Italia</span> in Eizeringen, Lennik. Sinds 2016 serveren Aldo Santoro en Gabriella Parillo hier authentieke Napolitaanse pizza's en pasta's. Proef de heerlijke smaken van Campanië in België. Kom langs voor een unieke culinaire ervaring!
         </p>
     </div>
+</article>
+
+    <!-- GALLERY -->
+<article id="fotos1">
+        <div class="container-fluid gallery" id="gallery">
+
+          <div class="centered-container">
+            <div class="image-container reveal">
+              <div class="scrollable-images">
+                  <img src="https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Zoro">
+                  <img src="https://images.pexels.com/photos/1082343/pexels-photo-1082343.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here">
+                  <img src="https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/1373915/pexels-photo-1373915.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/2762942/pexels-photo-2762942.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/2471171/pexels-photo-2471171.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Northern Lights, Norway">
+                  <img src="https://images.pexels.com/photos/226004/pexels-photo-226004.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/2204771/pexels-photo-2204771.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here">
+                  <img src="https://images.pexels.com/photos/3343627/pexels-photo-3343627.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/803290/pexels-photo-803290.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/1087908/pexels-photo-1087908.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Zoro">
+                  <img src="https://images.pexels.com/photos/2412950/pexels-photo-2412950.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/444711/pexels-photo-444711.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/2381347/pexels-photo-2381347.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here">
+                  <img src="https://images.pexels.com/photos/3590401/pexels-photo-3590401.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/4057736/pexels-photo-4057736.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+                  <img src="https://images.pexels.com/photos/2619967/pexels-photo-2619967.jpeg?auto=compress&cs=tinysrgb&w=300 alt="Zoro">
+                  <img src="https://images.pexels.com/photos/3767968/pexels-photo-3767968.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Caption here" >
+              </div>
+            </div>
+          </div>
+          
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage" alt="X">
+            <div id="caption"></div>
+          </div>
+</article>
+
+<!-- INFO -->
+
+<article class="container-container-info">
+    <div class="container-info">
+    <p>In onze gezellige pizzeria, met plaats voor ongeveer 20 personen, vindt u een stukje Italië. We nodigen u uit om te genieten van de serene en familiale sfeer terwijl u onze producten van 100% Italiaanse kwaliteit proeft.</p>
+    <p><strong>Maak je reservering op het onderstaande nummer. We wachten op je! &#127829; &#58175;</strong></p>
+    <p><strong><a style="color: #EC4747;" href="tel:024613157">02 461 31 57</a></strong></p>
+</div>
 </article>
 
 <!-- Menu section -->
@@ -79,18 +130,18 @@
     <div class="container-select-menu">
         <div class="select-menu">
             <ul class="ul-select">
-                <li class="select first" onclick="showMenu('pizzas')" on>Pizza's</li>
-                <li class="select" onclick="showMenu('pastas')">Pasta's</li>
-                <li class="select" onclick="showMenu('antipasti')">Antipasti</li>
-                <li class="select" onclick="showMenu('scaloppine')">Scaloppine</li>
-                <li class="select last" onclick="showMenu('insalata')">Insalata</li>
+                <li class="select first" onclick="showMenu('pizzas', this)" on>Pizza's</li>
+                <li class="select" onclick="showMenu('pastas', this)">Pasta's</li>
+                <li class="select" onclick="showMenu('antipasti', this)">Antipasti</li>
+                <li class="select" onclick="showMenu('scaloppine', this)">Scaloppine</li>
+                <li class="select last" onclick="showMenu('insalata', this)">Insalata</li>
             </ul>
         </div>
     </div>
     <div id="menu-content" class="menu-content"></div>
-
-</article>
 </div>
+</article>
+
 
 <!-- Opening section -->
 
@@ -116,7 +167,7 @@
     <div class="body-menu">
 
 <!-- Contact section -->
-<article>
+<footer>
 <div class="body-contact" id="contact1">
 
 
@@ -126,17 +177,24 @@
     <div class="contact-container"><a id="contact"></a>
         <div class="address reveal">
             <ul class="ul-contact">
-                <li><a href="tel:024613157">Bel ons</a></li>
-                <li><a href="https://www.takeaway.com/be/menu/bella-italia-lennik?shipping=pickup" target="_blank">Bestel online</a></li>
-                <li><a href="https://www.facebook.com/FastfoodBellaItalia/" target="_blank">Volg ons</a></li>
+                <li><a href="tel:024613157"><span class="material-symbols-outlined">
+                    call
+                    </span></a></li>
+                <li><a href="https://www.takeaway.com/be/menu/bella-italia-lennik?shipping=pickup" target="_blank"><span class="material-symbols-outlined">
+                    restaurant
+                    </span></a></li>
+                <li><a href="https://www.facebook.com/FastfoodBellaItalia/" target="_blank"><span class="material-symbols-outlined">
+                    thumb_up
+                    </span></a></li>
             </ul>
-            <p>Ninoofsesteenweg 55, 1750 Lennik</p>
+            
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.7789716792213!2d4.146137712481819!3d50.83525785946389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b9226fb7c975%3A0x5c718d3ae0fb6b03!2sPizzeria%20BELLA%20ITALIA%20di%20ALDO%20SANTORO!5e0!3m2!1sit!2sbe!4v1721389199444!5m2!1sit!2sbe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p style="padding-top: 2rem;">Ninoofsesteenweg 55, 1750 Lennik</p>
             
         </div>
     </div>
 
-</article>
+</footer>
 
     <footer>
         <div class="footer-container">
@@ -148,6 +206,6 @@
 </div>
 
 
-<script src="script.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

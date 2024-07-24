@@ -651,7 +651,6 @@ iframe {
     overflow: hidden;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.9);
-    background-size: contain;
   }
   
   .modal-content {
@@ -847,6 +846,10 @@ iframe {
         color: #ee3639;
     }
 
+    .family-img > img {
+        width: 40dvw;
+    }
+
 
     .menu-content {
         width: 50dvw;
@@ -865,6 +868,12 @@ iframe {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .story-container, .container-info {
+        width: 40dvw;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -933,7 +942,7 @@ iframe {
     }
 
     .family-img > img {
-        width: 65dvw;
+        width: 40dvw;
     }
 
     .menu-content {
